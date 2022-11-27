@@ -23,9 +23,9 @@ class Test extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
      */
-    public function handle()
+    public function handle():void
     {
         $name = $this->ask('What is your name?');
         $this->info("Your name is {$name}");

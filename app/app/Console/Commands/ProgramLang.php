@@ -23,9 +23,9 @@ class ProgramLang extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
      */
-    public function handle()
+    public function handle():void
     {
         $language = $this->choice('Which language do you prefer?', [
             'PHP',

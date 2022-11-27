@@ -23,9 +23,9 @@ class Ask extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
      */
-    public function handle()
+    public function handle():void
     {
         if ($this->confirm('Do you wish to continue?')) {
             $this->info("It's continue");
