@@ -1,5 +1,13 @@
 <?php
 
+use App\Jobs\Deploy;
+use App\Jobs\ProcessPayment;
+use App\Jobs\PullRepo;
+use App\Jobs\RunTests;
+use App\Jobs\SendWelcomeEmail;
+use App\Jobs\TestJob;
+use App\User;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/hello', function () {
+Route::get('/', function () {
+    TestJob::dispatch();
+
     return view('welcome');
 });
